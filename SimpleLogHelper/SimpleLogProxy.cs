@@ -23,19 +23,6 @@ namespace SimpleLogHelper
             _working = false;
         }
 
-        /// <summary>
-        /// 写入新日志，根据指定的日志对象Msg
-        /// </summary>
-        /// <param name="msg">日志内容对象</param>
-        private void AddLog(Msg msg)
-        {
-            if (_working)
-            {
-                _threadSafeLog.AddMessage(msg);
-            }
-        }
-
-
         public void AddLog(string text)
         {
             AddLog(new Msg(text));
@@ -54,6 +41,18 @@ namespace SimpleLogHelper
         public void AddLog(DateTime dt, string text, MsgType type)
         {
             AddLog(new Msg(dt, text, type));
+        }
+
+        /// <summary>
+        /// 写入新日志，根据指定的日志对象Msg
+        /// </summary>
+        /// <param name="msg">日志内容对象</param>
+        private void AddLog(Msg msg)
+        {
+            if (_working)
+            {
+                _threadSafeLog.AddMessage(msg);
+            }
         }
 
         #region 单例模式

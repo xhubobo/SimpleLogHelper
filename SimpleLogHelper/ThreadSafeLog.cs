@@ -96,7 +96,7 @@ namespace SimpleLogHelper
             return ret;
         }
 
-        private Msg PeekMessage()
+        private Msg PickMessage()
         {
             Msg msg = null;
             lock (_msgQueue)
@@ -133,7 +133,7 @@ namespace SimpleLogHelper
                     continue;
                 }
 
-                DoWriteFile(PeekMessage());
+                DoWriteFile(PickMessage());
             }
 
             CloseFile();
