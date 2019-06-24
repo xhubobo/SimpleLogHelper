@@ -35,7 +35,7 @@ namespace SimpleLogHelper
     /// <summary>
     /// 表示一个日志记录的对象
     /// </summary>
-    public class Msg
+    internal class Msg
     {
         /// <summary>
         /// 创建新的日志记录实例;日志记录的内容为空,消息类型为MsgType.Unknown,日志时间为当前时间

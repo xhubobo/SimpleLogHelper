@@ -27,7 +27,7 @@ namespace SimpleLogHelper
         /// 写入新日志，根据指定的日志对象Msg
         /// </summary>
         /// <param name="msg">日志内容对象</param>
-        public void AddLog(Msg msg)
+        private void AddLog(Msg msg)
         {
             if (_working)
             {

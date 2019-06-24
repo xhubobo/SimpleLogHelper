@@ -18,8 +18,8 @@ namespace SimpleLogHelper
         private StreamWriter _writer;
         private readonly object _writerLockHelper = new object();
 
-        private Thread _threadWorker; //工作线程
-        private bool _threadWorking; //日志写入线程的控制标记
+        private Thread _threadWorker;   //工作线程
+        private bool _threadWorking;    //日志写入线程的控制标记
         private readonly object _threadWorkingLockHelper = new object();
 
         private bool IsThreadWorking
