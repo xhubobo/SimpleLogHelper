@@ -66,22 +66,22 @@ namespace SimpleLogHelper
         private static volatile SimpleLogProxy _instance;
         private static readonly object LockHelper = new object();
 
-        public static SimpleLogProxy Instance()
+        public static SimpleLogProxy Instance
         {
-            if (null != _instance)
+            get
             {
+                if (_instance != null)
+                {
+                    return _instance;
+                }
+
+                lock (LockHelper)
+                {
+                    _instance = _instance ?? new SimpleLogProxy();
+                }
+
                 return _instance;
             }
-
-            lock (LockHelper)
-            {
-                if (null == _instance)
-                {
-                    _instance = new SimpleLogProxy();
-                }
-            }
-
-            return _instance;
         }
 
         #endregion
