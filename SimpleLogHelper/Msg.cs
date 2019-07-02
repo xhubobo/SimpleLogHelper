@@ -94,7 +94,8 @@ namespace SimpleLogHelper
 
         public new string ToString()
         {
-            return $"{Datetime}{'\t'}{Type}{'\t'}{Text}{'\n'}";
+            var datetime = Datetime.ToString("yyyy-MM-dd HH:mm:ss");
+            return $"{datetime}{'\t'}{Type}{'\t'}{Text}{'\n'}";
         }
     }
 
