@@ -1,7 +1,4 @@
-﻿using System;
-using System.Reflection;
-
-namespace SimpleLogHelper
+﻿namespace SimpleLogHelper
 {
     public abstract class SimpleLogHelperTemplate
     {
