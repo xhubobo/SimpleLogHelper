@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SimpleLogHelperTemplate.cs" />
     <Compile Include="SimpleLogProxy.cs" />
     <Compile Include="LogPathHelper.cs" />
     <Compile Include="Msg.cs" />
