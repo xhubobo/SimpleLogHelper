@@ -1,4 +1,5 @@
 ﻿using System;
+using SimpleLogHelper;
 using TestModule;
 
 namespace test
@@ -20,6 +21,9 @@ namespace test
             TestClass.AddExceptionLog();
 
             Console.ReadKey();
+
+            //停止日志
+            SimpleLogProxy.Instance.Stop();
         }
     }
 }
