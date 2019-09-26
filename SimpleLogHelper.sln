@@ -6,8 +6,14 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleLogHelper", "SimpleLogHelper\SimpleLogHelper.csproj", "{63CF08F3-E371-48E8-9D0D-6B034F455764}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{683D0EA2-633D-4136-BCDC-3B2EE0EA36FE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6CFD0EF6-8D6E-47B6-A913-4B133DD9A27A} = {6CFD0EF6-8D6E-47B6-A913-4B133DD9A27A}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestModule", "TestModule\TestModule.csproj", "{6CFD0EF6-8D6E-47B6-A913-4B133DD9A27A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{63CF08F3-E371-48E8-9D0D-6B034F455764} = {63CF08F3-E371-48E8-9D0D-6B034F455764}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
