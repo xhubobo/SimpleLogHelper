@@ -8,10 +8,10 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("SimpleLogHelper")]
 [assembly: AssemblyDescription("简单日志模块")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("xhubobo")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("SimpleLogHelper")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2019")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("xhubobo")]
 [assembly: AssemblyCulture("")]
 
 //将 ComVisible 设置为 false 将使此程序集中的类型
