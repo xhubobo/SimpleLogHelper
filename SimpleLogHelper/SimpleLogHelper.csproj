@@ -75,6 +75,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EnumExt.cs" />
     <Compile Include="SimpleLogHelperTemplate.cs" />
     <Compile Include="SimpleLogProxy.cs" />
     <Compile Include="LogPathHelper.cs" />

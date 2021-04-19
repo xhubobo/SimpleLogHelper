@@ -94,7 +94,7 @@ namespace SimpleLogHelper
 
         public new string ToString()
         {
-            var datetime = Datetime.ToString("yyyy-MM-dd HH:mm:ss");
+            var datetime = Datetime.ToString("yyyy-MM-dd HH:mm:ss.fff");
             return $"{datetime} {Type,-12}{Text}";
         }
     }
