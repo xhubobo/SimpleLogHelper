@@ -6,6 +6,18 @@ namespace test
 {
     internal static class LogHelper
     {
+        private static readonly LogHelperInstance LogInstance = new LogHelperInstance();
+
+        public static void InitLogPath()
+        {
+            LogInstance.InitLogPath();
+        }
+
+        public static void Stop()
+        {
+            LogInstance.Stop();
+        }
+
         public static void AddLog(Exception e, MsgType type = MsgType.Error)
         {
             AddLog(e.Message, type);
@@ -13,13 +25,12 @@ namespace test
 
         public static void AddLog(string msg, MsgType type = MsgType.Information)
         {
-            var log = new LogHelperInstance();
-            log.AddLog(msg, type);
+            LogInstance.AddLog(msg, type);
         }
 
         private class LogHelperInstance : SimpleLogHelperTemplate
         {
-            protected override string AssemblyName { get; } = Assembly.GetExecutingAssembly().GetName().Name;
+            protected override Assembly CurrentAssembly => Assembly.GetExecutingAssembly();
         }
     }
 }
