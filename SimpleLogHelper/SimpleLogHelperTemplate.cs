@@ -51,6 +51,11 @@ namespace SimpleLogHelper
             SimpleLogProxy.Instance.SetLogPath(path);
         }
 
+        public void SetLogType(LogType logType)
+        {
+            SimpleLogProxy.Instance.SetLogType(logType);
+        }
+
         public void Stop()
         {
             SimpleLogProxy.Instance.Stop();

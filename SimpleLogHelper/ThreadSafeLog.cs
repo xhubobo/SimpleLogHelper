@@ -175,7 +175,7 @@ namespace SimpleLogHelper
             {
                 if (_writer == null)
                 {
-                    _writer = new StreamWriter(LogPathHelper.GetFilename(), true, Encoding.UTF8);
+                    _writer = new StreamWriter(LogPathHelper.GetFileName(), true, Encoding.UTF8);
                 }
             }
         }

@@ -9,7 +9,7 @@ namespace SimpleLogHelper
         private string _logPath = @"./Log/";
 
         //日志记录的类型
-        private LogType _logType = LogType.Daily;
+        private LogType _logType = LogType.Monthly;
 
         //日志文件生命周期的时间标记
         private DateTime _timeSign;
@@ -94,7 +94,7 @@ namespace SimpleLogHelper
         /// 创建文件到期的时间标记，通过判断文件的到期时间标记将决定是否创建新文件。
         /// </summary>
         /// <returns>日志文件名</returns>
-        public string GetFilename()
+        public string GetFileName()
         {
             //创建文件夹
             if (!Directory.Exists(LogPath))
