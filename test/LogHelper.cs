@@ -10,7 +10,7 @@ namespace test
 
         public static void InitLogPath()
         {
-            LogInstance.InitLogPath();
+            LogInstance.InitLogPath(LogType.Daily);
         }
 
         public static void Stop()
