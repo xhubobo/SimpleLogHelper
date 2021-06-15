@@ -34,7 +34,7 @@ namespace SimpleLogHelper
         /// 初始化日志路径
         /// </summary>
         /// <remarks>仅在程序入口处调用</remarks>
-        public void InitLogPath()
+        public void InitLogPath(LogType logType = LogType.Monthly)
         {
             var path = Path.Combine(Environment.CurrentDirectory, "Log\\");
             if (!Directory.Exists(path))
@@ -48,12 +48,8 @@ namespace SimpleLogHelper
                 Directory.CreateDirectory(path);
             }
 
-            SimpleLogProxy.Instance.SetLogPath(path);
-        }
-
-        public void SetLogType(LogType logType)
-        {
             SimpleLogProxy.Instance.SetLogType(logType);
+            SimpleLogProxy.Instance.SetLogPath(path);
         }
 
         public void Stop()
